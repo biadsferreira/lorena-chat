@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="chat.css">
+    
+    <title>Chat</title>
+</head>
+
+<body>
+    <header>
+
+        <!-- Menu hamburguer para navegação telas menores que 601px -->
+        <nav class="btn-celular" onclick="clickMenuCel()">
+            <img src="imagens/hamburger.svg" alt="Ícone menu hamburger" id="hamburger">
+
+            <!-- Div que comporta todos os ícones e links do menu mobile. ID menuMobile é utilizado na função de mostrar ao clicar no JS -->
+            <div class="menu-celular-interno" id="menuCelular">
+
+                <!-- Links com ícones do menu mobile -->
+                <a href="../sabrina-cadastro-de-animais/cadastro-de-animais.html">
+                    <img src="imagens/icone_adicionar.svg" alt="Icone adição">
+                    <p>Doe um bichinho</p>
+                </a>
+
+                <a href="../theodoro-gerenciamento-de-conta/gerenciamento-de-conta.html">
+                    <img src="imagens/icone_mao-coracao.svg" alt="Icone mão com coração">
+                    <p>Minhas doações</p>
+                </a>
+
+                <a href="../alicia-cadastro-de-usuario/cadastro-usuario.html">
+                    <img src="imagens/icone_lista-check.svg" alt="Prancheta com simbolo de check">
+                    <p>Cadastre-se</p>
+                </a>
+
+                <a href="#">
+                    <img src="imagens/icone_chat.svg" alt="Icone de chat">
+                    <p>Chat</p>
+                </a>
+                <div class="cvs">
+                    <h1>Conversas</h1>
+                </div>
+                <div class="cv-ong">
+                    <img src="imagens/ong-amor-animal.png" alt="ong-amor-animal"><div class="info"><h5>ONG Amor Animal</h5><h1><b>Pipoca</b></h1></div>
+                </div>
+
+            </div>
+
+        </nav>
+
+        <!-- logo -->
+        <a href="../danilo-pagina-inicial/index.html"><img src="imagens/logo.svg" alt="logo" class="logo"></a>
+
+        <!-- caixa branca do header -->
+        <nav class="caixa-branca">
+            <!-- div com o titulo -->
+            <div class="title">
+                <h1>Um novo conceito para <b>doar e adotar</b> cães e gatos</h1>
+            </div>
+            <!-- div contendo a caixa de busca e os links de navegação para telas maiores que 1200px -->
+            <nav class="navegation">
+                <!-- caixa de busca -->
+                <div class="caixa-busca"><img src="imagens/icone_lupa.svg" alt="lupa"><input type="text" name="busca"
+                        id="busca" placeholder="Busque por um termo específico"></div>
+                <!-- menu para telas maiores que 1200px -->
+                <nav class="links">
+                    <a href="../sabrina-cadastro-de-animais/cadastro-de-animais.html"><img
+                            src="imagens/icone_adicionar.svg" alt="add">
+                        <p>Doe um bichinho</p>
+                    </a>
+                    <a href="../theodoro-gerenciamento-de-conta/gerenciamento-de-conta.html"><img
+                            src="imagens/icone_mao-coracao.svg" alt="mao-coracao">
+                        <p>Minhas doações</p>
+                    </a>
+                    <a href="../alicia-cadastro-de-usuario/cadastro-usuario.html"><img
+                            src="imagens/icone_lista-check.svg" alt="sign-in">
+                        <p>Cadastre-se</p>
+                    </a>
+                    <a href=""><img src="imagens/icone_chat.svg" alt="chat">
+                        <p>Chat</p>
+                    </a>
+                </nav>
+
+                <!-- menu hamburguer para telas menores que 1201px -->
+                <nav class="btn-tablet" onclick="clickMenuTablet()">
+                    <img src="imagens/hamburger.svg" alt="menu-hamburguer">
+                    <!-- Div que comporta todos os ícones e links do menu mobile. ID menuMobile é utilizado na função de mostrar ao clicar no JS -->
+                    <div class="menu-tablet-interno" id="menuTablet">
+
+                        <!-- Links com ícones do menu mobile -->
+                        <a href="../sabrina-cadastro-de-animais/cadastro-de-animais.html">
+                            <img src="imagens/icone_adicionar.svg" alt="Icone adição">
+                            <p>Doe um bichinho</p>
+                        </a>
+
+                        <a href="../theodoro-gerenciamento-de-conta/gerenciamento-de-conta.html">
+                            <img src="imagens/icone_mao-coracao.svg" alt="Icone mão com coração">
+                            <p>Minhas doações</p>
+                        </a>
+
+                        <a href="../alicia-cadastro-de-usuario/cadastro-usuario.html">
+                            <img src="imagens/icone_lista-check.svg" alt="Prancheta com simbolo de check">
+                            <p>Cadastre-se</p>
+                        </a>
+
+                        <a href="#">
+                            <img src="imagens/icone_chat.svg" alt="Icone de chat">
+                            <p>Chat</p>
+                        </a>
+
+                    </div>
+                </nav>
+            </nav>
+        </nav>
+
+    </header>
+    <main>
+        <aside>
+            <h1><b>Conversas</b></h1>
+            <div class="ong-chat">
+                <div class="ong-img"><img src="imagens/ong-amor-animal.png" alt="ong" id="ong-img"></div>
+                <div class="ong-info">
+                    <h4>ONG Amor Animal</h4>
+                    <h1><b>Pipoca</b></h1>
+                </div>
+            </div>
+        </aside>
+        <section class="chat">
+            <div class="chat-title">
+                <h1>Chat</h1>
+            </div>
+            <div class="about"><img src="imagens/pipoca-rosto.jpg" alt="">
+                <h1>Vocês estão conversando sobre o Pipoca</h1>
+            </div>
+            <div class="chat-space"></div>
+            <div class="chat-text"><input type="text" name="msg" id="msg" placeholder="Digite sua mensagem"><img
+                    src="imagens/icone_enviar.svg" alt="send" id="send" onclick="sendMsg()"></div>
+        </section>
+    </main>
+<script src="chat.js"></script>
+<script src="chatmsg.js"></script>
+</body>
+
+</html>
